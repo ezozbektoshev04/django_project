@@ -20,3 +20,10 @@ from django.urls import path
 urlpatterns = [
     path('admin/', admin.site.urls),
 ]
+# urls.py - Add to your URL patterns
+from django.urls import path
+from . import views # adjust import based on your project structure
+urlpatterns = [
+ # ... your existing URL patterns ...
+ path('health/', views.health_check, name='health-check'),
+]
